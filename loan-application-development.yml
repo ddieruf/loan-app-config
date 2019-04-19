@@ -7,10 +7,6 @@ Logging:
     DisableColors: true
     LogLevel: 
       Default: Information
-eureka:
-  client: 
-    serviceUrl: http://localhost:8761/eureka/
-    validateCertificates: false
 security:
   oauth2:
     client:
@@ -30,14 +26,15 @@ management:
     useShortTraceIds: true
     exporter:
       zipkin:
-        endpoint: https://zipkin-server.apps.beet.springapps.io/api/v2/spans
+        endpoint: https://localhost:9411/api/v2/spans
         validateCertificates: false
         useShortTraceIds: true
 eureka:
   client: 
-    shouldFetchRegistry: false
+    #shouldFetchRegistry: false
     serviceUrl: http://localhost:8761/eureka/
     shouldRegisterWithEureka: false
+    validateCertificates: false
   instance:
     port: 5000
 hystrix:
