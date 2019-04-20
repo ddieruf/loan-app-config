@@ -40,7 +40,7 @@ eureka:
 hystrix:
   stream:
     validate_certificates: false
-loanApplication:
+loanApprovalService:
   scheme: http
   address: loanchecker
   checkApplicationPath: api/check
